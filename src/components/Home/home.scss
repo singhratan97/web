@@ -1,0 +1,42 @@
+#home {
+  padding: 10px;
+  #first {
+    max-width: 900px;
+    margin: auto;
+    color: #232932;
+
+    h1 {
+      font-size: 35px;
+      font-weight: 800;
+    }
+
+    #card-container {
+      display: flex;
+      flex-wrap: wrap;
+
+      #card {
+        font-weight: 600;
+        // width: 200px;
+        padding: 25px 10px;
+        margin: 20px 10px;
+        margin-left: 0;
+        box-shadow: 0 4px 22px rgba(0, 0, 0, 0.16);
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+        top: 0;
+        transition: all 0.25s ease;
+        flex: 1 1 250px;
+      }
+
+      #card:hover {
+        top: -3px;
+      }
+    }
+  }
+
+  #second {
+    background-color: #232932;
+    color: #fff;
+  }
+}

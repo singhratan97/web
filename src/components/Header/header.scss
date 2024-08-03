@@ -1,0 +1,74 @@
+header {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 10px;
+  box-shadow: 4px 4px 10px 0 rgba($color: #000000, $alpha: 0.05);
+  margin-bottom: 15px;
+  position: sticky;
+  top: 0;
+
+  #logo {
+    font-size: 25px;
+    color: #893999;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    margin-right: 70px;
+
+    a {
+      color: #893999 !important;
+      text-decoration: none;
+    }
+  }
+
+  nav {
+    display: flex;
+
+    div {
+      margin-right: 15px;
+      position: relative;
+      padding-bottom: 3px;
+
+      a {
+        text-decoration: none;
+        color: #232932;
+        transition: all 0.25s ease;
+      }
+
+      a:hover {
+        color: #893999 !important;
+      }
+    }
+
+    div::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #893999;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: all 0.25s ease;
+    }
+
+    div:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+
+  #contact {
+    a {
+      text-decoration: none;
+      color: #232932;
+    }
+    a:hover {
+      color: #893999 !important;
+      text-decoration: underline;
+    }
+  }
+}
