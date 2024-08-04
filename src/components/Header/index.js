@@ -1,57 +1,114 @@
 import "./header.scss";
 import { NavLink } from "react-router-dom";
+import menu from "../../assets/menu.png";
+import { useState } from "react";
 
 const Header = () => {
+  const [clickMenu, setClickMenu] = useState(false);
   return (
-    <div className="header-container">
-      <header>
-        <div id="logo">
-          <NavLink to="/">Widetran Language Services</NavLink>
+    <>
+      <div className="header-container">
+        <header>
+          <div id="logo">
+            <NavLink to="/">Widetran Language Services</NavLink>
+          </div>
+          <div id="menu">
+            <img
+              className="menu"
+              src={menu}
+              alt="menu"
+              onClick={() => {
+                setClickMenu((prev) => !prev);
+              }}
+            />
+          </div>
+          <nav>
+            <div>
+              <NavLink
+                to="/"
+                style={({ isActive }) => ({
+                  color: isActive ? "#893999" : "#232932",
+                })}
+              >
+                Home
+              </NavLink>
+            </div>
+            <div>
+              <NavLink
+                to="/about-us"
+                style={({ isActive }) => ({
+                  color: isActive ? "#893999" : "#232932",
+                })}
+              >
+                About us
+              </NavLink>
+            </div>
+            <div>
+              <NavLink
+                to="/products"
+                style={({ isActive }) => ({
+                  color: isActive ? "#893999" : "#232932",
+                })}
+              >
+                Products
+              </NavLink>
+            </div>
+            <div>
+              <NavLink
+                to="/contact"
+                style={({ isActive }) => ({
+                  color: isActive ? "#893999" : "#232932",
+                })}
+              >
+                Contact
+              </NavLink>
+            </div>
+          </nav>
+        </header>
+      </div>
+      <div className={`hamburger-menu ${clickMenu ? "nav-show" : ""}`}>
+        <div>
+          <NavLink
+            to="/"
+            style={({ isActive }) => ({
+              color: isActive ? "#893999" : "#232932",
+            })}
+          >
+            Home
+          </NavLink>
         </div>
-        <nav>
-          <div>
-            <NavLink
-              to="/"
-              style={({ isActive }) => ({
-                color: isActive ? "#893999" : "black",
-              })}
-            >
-              Home
-            </NavLink>
-          </div>
-          <div>
-            <NavLink
-              to="/about-us"
-              style={({ isActive }) => ({
-                color: isActive ? "#893999" : "black",
-              })}
-            >
-              About us
-            </NavLink>
-          </div>
-          <div>
-            <NavLink
-              to="/products"
-              style={({ isActive }) => ({
-                color: isActive ? "#893999" : "black",
-              })}
-            >
-              Products
-            </NavLink>
-          </div>
-          <div>
-            <NavLink
-              to="/contact"
-              style={({ isActive }) => ({
-                color: isActive ? "#893999" : "black",
-              })}
-            >
-              Contact
-            </NavLink>
-          </div>
-        </nav>
-      </header>
-    </div>
+        <div>
+          <NavLink
+            to="/about-us"
+            style={({ isActive }) => ({
+              color: isActive ? "#893999" : "#232932",
+            })}
+          >
+            About us
+          </NavLink>
+        </div>
+        <div>
+          <NavLink
+            to="/products"
+            style={({ isActive }) => ({
+              color: isActive ? "#893999" : "#232932",
+            })}
+          >
+            Products
+          </NavLink>
+        </div>
+        <div>
+          <NavLink
+            to="/contact"
+            style={({ isActive }) => ({
+              color: isActive ? "#893999" : "#232932",
+            })}
+          >
+            Contact
+          </NavLink>
+        </div>
+      </div>
+    </>
   );
 };
 

@@ -40,3 +40,14 @@
     color: #fff;
   }
 }
+
+@media only screen and (max-width: 760px) {
+  #home {
+    #first {
+      h1 {
+        font-size: 28px;
+        font-weight: 700;
+      }
+    }
+  }
+}
