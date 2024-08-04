@@ -10,7 +10,14 @@ const Header = () => {
       <div className="header-container">
         <header>
           <div id="logo">
-            <NavLink to="/">Widetran Language Services</NavLink>
+            <NavLink
+              to="/"
+              onClick={() => {
+                setClickMenu(false);
+              }}
+            >
+              Widetran Language Services
+            </NavLink>
           </div>
           <div id="menu">
             <img
@@ -70,6 +77,9 @@ const Header = () => {
         <div>
           <NavLink
             to="/"
+            onClick={() => {
+              setClickMenu(false);
+            }}
             style={({ isActive }) => ({
               color: isActive ? "#893999" : "#232932",
             })}
@@ -80,6 +90,14 @@ const Header = () => {
         <div>
           <NavLink
             to="/about-us"
+            onClick={() => {
+              setClickMenu(false);
+            }}
+            // state={{ clickMenu }}
+            // to={{
+            //   pathname: "/about-us",
+            //   state: { clickMenu },
+            // }}
             style={({ isActive }) => ({
               color: isActive ? "#893999" : "#232932",
             })}
@@ -90,6 +108,9 @@ const Header = () => {
         <div>
           <NavLink
             to="/products"
+            onClick={() => {
+              setClickMenu(false);
+            }}
             style={({ isActive }) => ({
               color: isActive ? "#893999" : "#232932",
             })}
@@ -100,6 +121,9 @@ const Header = () => {
         <div>
           <NavLink
             to="/contact"
+            onClick={() => {
+              setClickMenu(false);
+            }}
             style={({ isActive }) => ({
               color: isActive ? "#893999" : "#232932",
             })}

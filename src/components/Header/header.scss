@@ -126,6 +126,7 @@ header {
     opacity: 0;
     transform: translateY(-300px);
     transition: all 0.25s ease-out;
+    box-shadow: 4px 4px 10px 0 rgba($color: #000000, $alpha: 0.05);
 
     div {
       margin-bottom: 10px;

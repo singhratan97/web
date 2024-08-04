@@ -1,9 +1,9 @@
 #home {
-  padding: 10px;
   #first {
     max-width: 900px;
     margin: auto;
     color: #232932;
+    padding: 10px;
 
     h1 {
       font-size: 35px;
@@ -13,6 +13,7 @@
     #card-container {
       display: flex;
       flex-wrap: wrap;
+      margin-bottom: 30px;
 
       #card {
         font-weight: 600;
@@ -38,6 +39,42 @@
   #second {
     background-color: #232932;
     color: #fff;
+    padding: 10px;
+
+    #in-second-div {
+      max-width: 900px;
+      margin: auto;
+
+      h1 {
+        font-size: 35px;
+        font-weight: 800;
+      }
+
+      #card-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+
+        #card {
+          font-weight: 600;
+          // width: 200px;
+          padding: 25px 10px;
+          margin: 20px 10px;
+          margin-left: 0;
+          box-shadow: 0 4px 22px rgba(254, 254, 254, 0.16);
+          border-radius: 10px;
+          cursor: pointer;
+          position: relative;
+          top: 0;
+          transition: all 0.25s ease;
+          flex: 1 1 250px;
+        }
+
+        #card:hover {
+          top: -3px;
+        }
+      }
+    }
   }
 }
 
@@ -47,6 +84,14 @@
       h1 {
         font-size: 28px;
         font-weight: 700;
+      }
+    }
+    #second {
+      #in-second-div {
+        h1 {
+          font-size: 28px;
+          font-weight: 700;
+        }
       }
     }
   }
