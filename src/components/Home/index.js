@@ -37,6 +37,10 @@ const Home = () => {
             <div id="card">Language Translator</div>
             <div id="card">Language Translator</div>
           </div>
+          <p>
+            To know more and for direct consultation, click on below button.
+          </p>
+          <button className="consult">Consult me!</button>
         </div>
       </div>
     </div>

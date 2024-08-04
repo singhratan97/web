@@ -40,6 +40,7 @@
     background-color: #232932;
     color: #fff;
     padding: 10px;
+    padding-bottom: 65px;
 
     #in-second-div {
       max-width: 900px;
@@ -61,7 +62,7 @@
           padding: 25px 10px;
           margin: 20px 10px;
           margin-left: 0;
-          box-shadow: 0 4px 22px rgba(254, 254, 254, 0.16);
+          box-shadow: 4px 4px 10px 0px rgba(254, 254, 254, 0.16);
           border-radius: 10px;
           cursor: pointer;
           position: relative;
@@ -73,6 +74,22 @@
         #card:hover {
           top: -3px;
         }
+      }
+      .consult {
+        border: none;
+        cursor: pointer;
+        background-color: #893999;
+        font-family: inherit;
+        padding: 15px 55px;
+        font-size: 18px;
+        border-radius: 7px;
+        box-shadow: 0 4px 22px rgba(254, 254, 254, 0.16);
+        transform: translateY(0);
+        transition: all 0.25s ease-in;
+        color: #fff;
+      }
+      .consult:hover {
+        transform: translateY(-2px);
       }
     }
   }
