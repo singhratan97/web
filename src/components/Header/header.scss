@@ -22,6 +22,7 @@ header {
     font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;
     font-weight: 700;
+    -webkit-tap-highlight-color: transparent;
     // margin-right: 70px;
 
     a {
@@ -111,6 +112,7 @@ header {
         cursor: pointer;
         display: block;
         margin-left: 10px;
+        -webkit-tap-highlight-color: transparent;
       }
     }
   }
@@ -127,7 +129,6 @@ header {
     transform: translateY(-300px);
     transition: all 0.25s ease-out;
     box-shadow: 4px 4px 10px 0 rgba($color: #000000, $alpha: 0.05);
-
     div {
       margin-bottom: 10px;
 
