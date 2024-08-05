@@ -131,6 +131,7 @@ header {
     box-shadow: 4px 4px 10px 0 rgba($color: #000000, $alpha: 0.05);
     div {
       margin-bottom: 10px;
+      -webkit-tap-highlight-color: transparent;
 
       a {
         text-decoration: none;
