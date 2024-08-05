@@ -3,11 +3,12 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Products from "./components/Products";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <div id="app" style={{ position: "relative" }}>
       <Router>
         <Header />
 
@@ -21,6 +22,7 @@ function App() {
           />
         </Routes>
         <Footer />
+        <ScrollToTop />
       </Router>
     </div>
   );
