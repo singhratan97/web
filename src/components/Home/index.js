@@ -6,6 +6,7 @@ const Home = () => {
   const textRef = useRef(null);
 
   useEffect(() => {
+    let observerRefValue = null;
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
@@ -17,11 +18,12 @@ const Home = () => {
 
     if (textRef.current) {
       observer.observe(textRef.current);
+      observerRefValue = textRef.current;
     }
 
     return () => {
-      if (textRef.current) {
-        observer.unobserve(textRef.current);
+      if (observerRefValue) {
+        observer.unobserve(observerRefValue);
       }
     };
   }, []);
