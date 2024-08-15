@@ -17,6 +17,8 @@ const Header = () => {
               }}
             >
               Widetran Language Services
+              <br />
+              Private Limited
             </NavLink>
           </div>
           <div id="menu">
