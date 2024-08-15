@@ -23,12 +23,17 @@ header {
     font-optical-sizing: auto;
     font-weight: 700;
     -webkit-tap-highlight-color: transparent;
+    transition: all 0.25s ease-in;
     // margin-right: 70px;
 
     a {
       color: #893999 !important;
       text-decoration: none;
     }
+  }
+
+  #logo:hover {
+    text-shadow: 0.5px 0.5px 18px;
   }
 
   nav {
