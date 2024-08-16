@@ -1,0 +1,117 @@
+#home {
+  #first {
+    max-width: 900px;
+    margin: auto;
+    color: #232932;
+    padding: 10px;
+
+    h1 {
+      font-size: 35px;
+      font-weight: 800;
+    }
+
+    #card-container {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+
+      #card {
+        font-weight: 600;
+        // width: 200px;
+        padding: 25px 10px;
+        margin: 20px 10px;
+        margin-left: 0;
+        box-shadow: 0 4px 22px rgba(0, 0, 0, 0.16);
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+        top: 0;
+        transition: all 0.25s ease;
+        flex: 1 1 250px;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      #card:hover {
+        top: -3px;
+      }
+    }
+  }
+
+  #second {
+    background-color: #232932;
+    color: #fff;
+    padding: 10px;
+    padding-bottom: 65px;
+
+    #in-second-div {
+      max-width: 900px;
+      margin: auto;
+
+      h1 {
+        font-size: 35px;
+        font-weight: 800;
+      }
+
+      #card-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+
+        #card {
+          font-weight: 600;
+          // width: 200px;
+          padding: 25px 10px;
+          margin: 20px 10px;
+          margin-left: 0;
+          box-shadow: 4px 4px 10px 0px rgba(254, 254, 254, 0.16);
+          border-radius: 10px;
+          cursor: pointer;
+          position: relative;
+          top: 0;
+          transition: all 0.25s ease;
+          flex: 1 1 250px;
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        #card:hover {
+          top: -3px;
+        }
+      }
+      .consult {
+        border: none;
+        cursor: pointer;
+        background-color: #893999;
+        font-family: inherit;
+        padding: 15px 55px;
+        font-size: 18px;
+        border-radius: 7px;
+        transform: translateY(0);
+        transition: all 0.25s ease-in;
+        color: #fff;
+      }
+      .consult:hover {
+        box-shadow: 0 4px 22px rgba(254, 254, 254, 0.16);
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #home {
+    #first {
+      h1 {
+        font-size: 28px;
+        font-weight: 700;
+      }
+    }
+    #second {
+      #in-second-div {
+        h1 {
+          font-size: 28px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

@@ -1,117 +1,83 @@
-#home {
-  #first {
-    max-width: 900px;
-    margin: auto;
-    color: #232932;
-    padding: 10px;
-
-    h1 {
-      font-size: 35px;
-      font-weight: 800;
-    }
-
-    #card-container {
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-
-      #card {
-        font-weight: 600;
-        // width: 200px;
-        padding: 25px 10px;
-        margin: 20px 10px;
-        margin-left: 0;
-        box-shadow: 0 4px 22px rgba(0, 0, 0, 0.16);
-        border-radius: 10px;
-        cursor: pointer;
-        position: relative;
-        top: 0;
-        transition: all 0.25s ease;
-        flex: 1 1 250px;
-        -webkit-tap-highlight-color: transparent;
+#home-container {
+  .inner-section-one {
+    // background-color: #232932;
+    // padding: 150px 0px 220px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 159px);
+    .inner-div-one {
+      max-width: 900px;
+      margin: auto;
+      color: #232932;
+      // color: #fff;
+      text-align: center;
+      .first-h1 {
+        margin-top: 0;
+        margin-bottom: 50px;
+        font-size: 40px;
+        font-weight: 800;
+        .your {
+          border-radius: 10px;
+          box-shadow: 0 4px 22px rgba(137, 57, 153, 0.16);
+          padding: 5px 10px;
+          color: rgb(137, 57, 153);
+          background-color: #232932;
+        }
       }
-
-      #card:hover {
-        top: -3px;
+      .second-h1 {
+        animation: showHide 1s infinite alternate;
       }
     }
   }
 
-  #second {
+  .inner-section-two {
     background-color: #232932;
-    color: #fff;
-    padding: 10px;
-    padding-bottom: 65px;
-
-    #in-second-div {
+    padding: 150px 0px 200px 0;
+    .inner-div-two {
       max-width: 900px;
       margin: auto;
-
-      h1 {
-        font-size: 35px;
+      color: #232932;
+      color: #fff;
+      text-align: center;
+      .first-h1 {
+        margin-bottom: 50px;
+        font-size: 40px;
         font-weight: 800;
+        .your {
+          border-radius: 10px;
+          box-shadow: 0 4px 22px rgba(137, 57, 153, 0.16);
+          padding: 5px 10px;
+          color: rgb(137, 57, 153);
+          background-color: #232932;
+        }
       }
-
-      #card-container {
+      .ul-section {
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 30px;
-
-        #card {
-          font-weight: 600;
-          // width: 200px;
-          padding: 25px 10px;
-          margin: 20px 10px;
-          margin-left: 0;
-          box-shadow: 4px 4px 10px 0px rgba(254, 254, 254, 0.16);
-          border-radius: 10px;
-          cursor: pointer;
-          position: relative;
-          top: 0;
-          transition: all 0.25s ease;
+        list-style-position: inside;
+        padding: 0;
+        li {
+          background-color: white;
+          padding: 30px 60px;
+          color: #232932;
+          margin: 20px 20px;
           flex: 1 1 250px;
-          -webkit-tap-highlight-color: transparent;
+          border-radius: 15px;
+          box-shadow: 6px 6px 6px rgba(254, 254, 254, 0.16);
+          font-weight: 700;
+          font-size: 17px;
         }
-
-        #card:hover {
-          top: -3px;
-        }
-      }
-      .consult {
-        border: none;
-        cursor: pointer;
-        background-color: #893999;
-        font-family: inherit;
-        padding: 15px 55px;
-        font-size: 18px;
-        border-radius: 7px;
-        transform: translateY(0);
-        transition: all 0.25s ease-in;
-        color: #fff;
-      }
-      .consult:hover {
-        box-shadow: 0 4px 22px rgba(254, 254, 254, 0.16);
-        transform: translateY(-2px);
       }
     }
   }
 }
 
-@media only screen and (max-width: 760px) {
-  #home {
-    #first {
-      h1 {
-        font-size: 28px;
-        font-weight: 700;
-      }
-    }
-    #second {
-      #in-second-div {
-        h1 {
-          font-size: 28px;
-          font-weight: 700;
-        }
-      }
-    }
+@keyframes showHide {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
