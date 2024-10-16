@@ -54,17 +54,27 @@ const Header = () => {
             </div>
             <div>
               <NavLink
-                to="/products"
+                to="/services"
                 style={({ isActive }) => ({
                   color: isActive ? "#893999" : "#232932",
                 })}
               >
-                Products
+                Services
               </NavLink>
             </div>
             <div>
               <NavLink
-                to="/contact"
+                to="/domains"
+                style={({ isActive }) => ({
+                  color: isActive ? "#893999" : "#232932",
+                })}
+              >
+                Domains
+              </NavLink>
+            </div>
+            <div>
+              <NavLink
+                to="/contact-us"
                 style={({ isActive }) => ({
                   color: isActive ? "#893999" : "#232932",
                 })}
@@ -72,11 +82,21 @@ const Header = () => {
                 Contact
               </NavLink>
             </div>
+            <div>
+              <NavLink
+                to="/join-us"
+                style={({ isActive }) => ({
+                  color: isActive ? "#893999" : "#232932",
+                })}
+              >
+                Join Us
+              </NavLink>
+            </div>
           </nav>
         </header>
       </div>
       <div className={`hamburger-menu ${clickMenu ? "nav-show" : ""}`}>
-        <div>
+        <div className="home-nav">
           <NavLink
             to="/"
             onClick={() => {
@@ -109,7 +129,7 @@ const Header = () => {
         </div>
         <div>
           <NavLink
-            to="/products"
+            to="/services"
             onClick={() => {
               setClickMenu(false);
             }}
@@ -117,12 +137,25 @@ const Header = () => {
               color: isActive ? "#893999" : "#232932",
             })}
           >
-            Products
+            Services
           </NavLink>
         </div>
         <div>
           <NavLink
-            to="/contact"
+            to="/domains"
+            onClick={() => {
+              setClickMenu(false);
+            }}
+            style={({ isActive }) => ({
+              color: isActive ? "#893999" : "#232932",
+            })}
+          >
+            Domains
+          </NavLink>
+        </div>
+        <div>
+          <NavLink
+            to="/contact-us"
             onClick={() => {
               setClickMenu(false);
             }}
@@ -131,6 +164,19 @@ const Header = () => {
             })}
           >
             Contact
+          </NavLink>
+        </div>
+        <div>
+          <NavLink
+            to="/join-us"
+            onClick={() => {
+              setClickMenu(false);
+            }}
+            style={({ isActive }) => ({
+              color: isActive ? "#893999" : "#232932",
+            })}
+          >
+            Join Us
           </NavLink>
         </div>
       </div>

@@ -1,6 +1,6 @@
 #home-container {
   .inner-section-one {
-    // background-color: #232932;
+    background-color: #232932;
     // padding: 150px 0px 220px 0;
     display: flex;
     justify-content: center;
@@ -10,7 +10,7 @@
       max-width: 900px;
       margin: auto;
       color: #232932;
-      // color: #fff;
+      color: #fff;
       text-align: center;
       .first-h1 {
         margin-top: 0;
@@ -19,10 +19,14 @@
         font-weight: 800;
         .your {
           border-radius: 10px;
-          box-shadow: 0 4px 22px rgba(137, 57, 153, 0.16);
+          box-shadow: 0px 1px 2px 0px rgba(137, 57, 153, 0.7),
+            1px 2px 4px 0px rgba(137, 57, 153, 0.7),
+            2px 4px 8px 0px rgba(137, 57, 153, 0.7),
+            2px 4px 16px 0px rgba(137, 57, 153, 0.7);
           padding: 5px 10px;
           color: rgb(137, 57, 153);
-          background-color: #232932;
+          // background-color: #232932;
+          // background-color: #fff;
         }
       }
       .second-h1 {
@@ -32,13 +36,13 @@
   }
 
   .inner-section-two {
-    background-color: #232932;
+    // background-color: #232932;
     padding: 150px 0px 200px 0;
     .inner-div-two {
       max-width: 900px;
       margin: auto;
       color: #232932;
-      color: #fff;
+      // color: #fff;
       text-align: center;
       .first-h1 {
         margin-bottom: 50px;
@@ -64,7 +68,7 @@
           margin: 20px 20px;
           flex: 1 1 250px;
           border-radius: 15px;
-          box-shadow: 6px 6px 6px rgba(254, 254, 254, 0.16);
+          box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
           font-weight: 700;
           font-size: 17px;
         }

@@ -14,6 +14,11 @@ const Home = () => {
           </h1>
         </div>
       </section>
+      <section>
+        <p> Number of Projects</p>
+        <p> Total Clients</p>
+        <p> increase count when we scroll to it and stop at max. limit</p>
+      </section>
       <section className="inner-section-two">
         <div className="inner-div-two">
           <h1 className="first-h1">Why Us?</h1>

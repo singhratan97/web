@@ -1,0 +1,23 @@
+.join-header {
+  background-color: rgb(137, 57, 153);
+  color: white;
+  text-align: center;
+  p {
+    margin: 0;
+    line-height: 1.7;
+    a {
+      color: rgb(44, 34, 46);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: white;
+    }
+  }
+}
+
+@media only screen and (max-width: 795px) {
+  .join-header {
+    display: none;
+  }
+}
