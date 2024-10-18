@@ -1,39 +1,16 @@
+import Maps from "./Maps";
+import AddressDetails from "./AddressDetails";
+import ContactForm from "./ContactForm";
+import "./contactUs.scss";
+
 const ContactUs = () => {
   return (
     <div>
-      <p>Address - Ranga school -dummy</p>
-      <p>Need Map for Above address </p>
-      <h3>Enquiry</h3>
-      <form>
-        <label>
-          Name*
-          <input type="text" />
-        </label>
-        <br />
-        <br />
-        <label>
-          Contact Number*
-          <input type="number" />
-        </label>
-        <br />
-        <br />
-        <label>
-          Email Id*
-          <input type="email" />
-        </label>
-        <br />
-        <br />
-        <label>
-          Requirement
-          <textarea col="10" row="10"></textarea>
-        </label>
-        <br />
-        <br />
-        <button mailTo="widetranwt@gmail.com">Submit</button>
-        {/* test with my mail */}
-        <br />
-        <br />
-      </form>
+      <Maps />
+      <div className="address-contact">
+        <AddressDetails />
+        <ContactForm />
+      </div>
     </div>
   );
 };
