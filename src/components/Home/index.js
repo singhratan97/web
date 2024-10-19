@@ -1,6 +1,81 @@
+import React, { useState, useEffect, useRef } from "react";
 import "./home.scss";
 
 const Home = () => {
+  const [number1, setNumber1] = useState(0);
+  const [number2, setNumber2] = useState(0);
+  const cardRef1 = useRef(null);
+  const cardRef2 = useRef(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    let cardRef1Current = cardRef1.current;
+    let cardRef2Current = cardRef2.current;
+    const observer1 = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          animateNumber1(0, 2000, 1000); // Start number animation
+          setHasAnimated(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    const observer2 = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          animateNumber2(0, 500, 1000); // Start number animation
+          setHasAnimated(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (cardRef1Current) {
+      observer1.observe(cardRef1Current);
+    }
+
+    if (cardRef2Current) {
+      observer2.observe(cardRef2Current);
+    }
+
+    return () => {
+      if (cardRef1Current) {
+        observer1.unobserve(cardRef1Current);
+      }
+      if (cardRef2Current) {
+        observer2.unobserve(cardRef2Current);
+      }
+    };
+  }, [hasAnimated]);
+
+  // Function to animate the number
+  const animateNumber1 = (start, end, duration) => {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      setNumber1(Math.floor(progress * (end - start) + start));
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  };
+
+  const animateNumber2 = (start, end, duration) => {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      setNumber2(Math.floor(progress * (end - start) + start));
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  };
+
   return (
     <div id="home-container">
       <section className="inner-section-one">
@@ -14,10 +89,17 @@ const Home = () => {
           </h1>
         </div>
       </section>
-      <section>
-        <p> Number of Projects</p>
-        <p> Total Clients</p>
-        <p> increase count when we scroll to it and stop at max. limit</p>
+      <section className="home-number-section">
+        <div className="home-number-div">
+          <div ref={cardRef1}>
+            <p>Number of Projects</p>
+            <p>{number1}+</p>
+          </div>
+          <div ref={cardRef2}>
+            <p>Total Clients</p>
+            <p>{number2}+</p>
+          </div>
+        </div>
       </section>
       <section className="inner-section-two">
         <div className="inner-div-two">
