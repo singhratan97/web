@@ -50,9 +50,12 @@
   .footer-links {
     nav {
       display: flex;
+      flex-wrap: wrap;
       gap: 20px;
       width: fit-content;
       margin: 20px auto;
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
 }
