@@ -11,6 +11,13 @@ const Header = () => {
     //   behavior: "smooth", // Smooth scrolling
     // });
   };
+
+  // useEffect(() => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth", // Smooth scrolling
+  //   });
+  // });
   return (
     <>
       <div className="header-container">

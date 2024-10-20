@@ -29,10 +29,6 @@ const Footer = () => {
   console.log(whatsapplink, "sdfvnfdvbjdf");
   return (
     <div className="footer">
-      {/* <p>Copyright 2024</p>
-      <p>All Social Media Handler Link</p>
-      <p>Address</p>
-      <p>List of links that sshown in header</p> */}
       <section className="social-media-links-section">
         <div className="social-media-links-div">
           <a href="https://www.google.com" target="_blank" rel="noreferrer">
