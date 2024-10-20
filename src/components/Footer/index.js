@@ -10,25 +10,23 @@ import { useEffect, useState } from "react";
 const Footer = () => {
   const [whatsapplink, setWhatsapplink] = useState("");
   useEffect(() => {
-    const handleWhatsAppClick = () => {
-      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-      // Detect if the user is on a mobile device
-      const isMobile = /android|iPad|iPhone|iPod/i.test(userAgent);
+    // Detect if the user is on a mobile device
+    const isMobile = /android|iPad|iPhone|iPod/i.test(userAgent);
 
-      if (isMobile) {
-        // If on mobile, open WhatsApp app
-        setWhatsapplink("whatsapp://send?phone=+917358457949&text=Hello!");
-      } else {
-        // If on desktop, open WhatsApp Web
-        setWhatsapplink(
-          "https://web.whatsapp.com/send?phone=+917358457949&text=Hello!"
-        );
-      }
-    };
+    if (isMobile) {
+      // If on mobile, open WhatsApp app
+      setWhatsapplink("whatsapp://send?phone=+917358457949&text=Hello!");
+    } else {
+      // If on desktop, open WhatsApp Web
+      setWhatsapplink(
+        "https://web.whatsapp.com/send?phone=+917358457949&text=Hello!"
+      );
+    }
+  }, [navigator, window]);
 
-    handleWhatsAppClick();
-  }, []);
+  console.log(whatsapplink, "sdfvnfdvbjdf");
   return (
     <div className="footer">
       {/* <p>Copyright 2024</p>
