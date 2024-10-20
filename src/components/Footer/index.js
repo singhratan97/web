@@ -30,7 +30,11 @@ const Footer = () => {
           </a>
         </div>
         <div className="social-media-links-div">
-          <a href="https://www.google.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://web.whatsapp.com/send?phone=+917358457949&text=Hello!"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Wh className="s-m-l" />
           </a>
         </div>
