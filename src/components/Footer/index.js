@@ -24,7 +24,7 @@ const Footer = () => {
         "https://web.whatsapp.com/send?phone=+917358457949&text=Hello!"
       );
     }
-  }, [navigator, window]);
+  }, []);
 
   console.log(whatsapplink, "sdfvnfdvbjdf");
   return (
