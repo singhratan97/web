@@ -4,12 +4,9 @@ const JoinHeader = () => {
   return (
     <div className="join-header">
       <p>
-        To join us, reach us at <a href="tel:+917092177850">+91-7092177850</a>{" "}
+        To join us, reach us at <a href="tel:+917358457949">+91-7358457949</a>{" "}
         or mail us to{" "}
-        <a href="mailto:ratandeepsingh702@gmail.com">
-          ratandeepsingh702@gmail.com
-        </a>
-        .
+        <a href="mailto:widetranwt@gmail.com">widetranwt@gmail.com</a>.
       </p>
     </div>
   );

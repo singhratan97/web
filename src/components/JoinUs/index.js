@@ -1,7 +1,7 @@
 import emailjs from "emailjs-com";
 import "./joinUs.scss";
 import { notification } from "antd";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { INDMobileRegex, emailRegex } from "../../utils/constants";
 import Loader from "../../dependencies/Loader";
 
@@ -13,6 +13,13 @@ const JoinUs = () => {
     email: "",
     message: "",
   });
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling
+    });
+  }, []);
 
   const handleChange = (e) => {
     if (e.target.name === "mobile") {

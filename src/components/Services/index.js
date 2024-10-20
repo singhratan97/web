@@ -1,6 +1,7 @@
 import React from "react";
 import { CaretRightOutlined } from "@ant-design/icons";
 import { Collapse, theme } from "antd";
+import { useEffect } from "react";
 import "./services.scss";
 
 //  <p>Make it as collapse</p>
@@ -27,18 +28,18 @@ const text1 = (
     Translation services in all the Indian and Foriegn Languages which cover up
     all the Asian, European, Middle East and African languages. One might
     require translation for the following purposes:
-    <ol>
+    <ul>
       <li>Immigration Purposes.</li>
       <li>Legal Purposes.</li>
       <li>Industrial Purposes.</li>
-    </ol>
+    </ul>
     Three reasons of WideTran being the best professional agency is because of
     our
-    <ol>
+    <ul>
       <li> Native Translators. </li>
       <li>Professional Translators.</li>
       <li>Domain specialized Translators.</li>
-    </ol>
+    </ul>
     We believe in focussing on quality translation which can be fulfilled by the
     native people only. All our language experts are Native people who work
     around the clock to meet our client's needs. We not only cater our services
@@ -55,7 +56,7 @@ const text2 = (
     Indian language fonts. For any handwritten document, scanned pdf or any
     other document, we have a wide range of typists. Some of the languages that
     WideTran cater Typing services are:
-    <ol>
+    <ul>
       <li>English typing</li>
       <li>Hindi typing</li>
       <li>Tamil typing</li>
@@ -71,7 +72,7 @@ const text2 = (
       <li>Assamese typing</li>
       <li>Nagamese typing</li>
       <li>Nepalese typing</li>
-    </ol>
+    </ul>
   </div>
 );
 const text3 = (
@@ -92,7 +93,7 @@ const text3 = (
     supporting all the Indian langauges interpreters along with the following
     Foreign language interpreters with domain knowledge and professional
     experience:
-    <ol>
+    <ul>
       <li>Spanish Interpreters</li>
       <li>Portuguese Interpreters</li>
       <li>Chinese Interpreters</li>
@@ -103,7 +104,7 @@ const text3 = (
       <li>Italian Interpreters</li>
       <li>French Interpreters</li>
       <li>German Interpreters</li>
-    </ol>
+    </ul>
     Sign Language Interpretation: Communication not only happens through WORDS
     but can also happen using ACTIONS. And that's where WideTran plays a very
     important role of providing Sign language interpreters. We have
@@ -111,12 +112,12 @@ const text3 = (
     interpretation who have real time exposure with deaf and dumb disabled
     people irrespective of their religion, caste and age. We provide following
     types of interpretation for our clients:
-    <ol>
+    <ul>
       <li>Onsite Interpretation</li>
       <li>Business Interpretation</li>
       <li>OnCall Interpretation</li>
       <li>Escort Interpretation</li>
-    </ol>
+    </ul>
   </div>
 );
 const text4 = (
@@ -185,7 +186,7 @@ const text6 = (
     </ul>
     We are specialized designers who are very versatile to work in the below
     Softwares:
-    <ol>
+    <ul>
       <li>Coreldraw</li>
       <li>Adobe Illustrator</li>
       <li>Adobe Indesign</li>
@@ -198,7 +199,7 @@ const text6 = (
       <li>Microsoft Powerpoint</li>
       <li>Microsoft Publisher</li>
       <li>Microsoft Excel</li>
-    </ol>
+    </ul>
   </div>
 );
 const text7 = (
@@ -235,14 +236,14 @@ const text8 = (
     proper quality check and formatting of the who document in line with the
     source. What's more important is to match the final output with the source
     and deliver a quality output. Types of File Formats:
-    <ol>
+    <ul>
       <li>PDF file</li>
       <li>JPEG file</li>
       <li>Word file</li>
       <li>HTML file</li>
       <li>XML file</li>
       <li>Excel file</li>
-    </ol>
+    </ul>
   </div>
 );
 const text9 = (
@@ -377,12 +378,20 @@ const Services = () => {
     boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px;",
   };
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling
+    });
+  }, []);
+
   return (
     <div className="services" id="services">
       <h1>Services</h1>
       <Collapse
-        bordered={false}
-        defaultActiveKey={["1"]}
+        // bordered={false}
+        size="large"
+        // defaultActiveKey={["1"]}
         expandIcon={({ isActive }) => (
           <CaretRightOutlined rotate={isActive ? 90 : 0} />
         )}

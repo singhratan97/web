@@ -5,6 +5,12 @@ import { useState } from "react";
 
 const Header = () => {
   const [clickMenu, setClickMenu] = useState(false);
+  const scrollTop = () => {
+    // window.scrollTo({
+    //   top: 0,
+    //   behavior: "smooth", // Smooth scrolling
+    // });
+  };
   return (
     <>
       <div className="header-container">
@@ -14,6 +20,7 @@ const Header = () => {
               to="/"
               onClick={() => {
                 setClickMenu(false);
+                scrollTop();
               }}
             >
               Widetran Language Services

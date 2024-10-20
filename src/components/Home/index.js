@@ -6,16 +6,24 @@ const Home = () => {
   const [number2, setNumber2] = useState(0);
   const cardRef1 = useRef(null);
   const cardRef2 = useRef(null);
-  const [hasAnimated, setHasAnimated] = useState(false);
+  const [hasAnimated1, setHasAnimated1] = useState(false);
+  const [hasAnimated2, setHasAnimated2] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling
+    });
+  }, []);
 
   useEffect(() => {
     let cardRef1Current = cardRef1.current;
     let cardRef2Current = cardRef2.current;
     const observer1 = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
+        if (entry.isIntersecting && !hasAnimated1) {
           animateNumber1(0, 2000, 1000); // Start number animation
-          setHasAnimated(true);
+          setHasAnimated1(true);
         }
       },
       { threshold: 0.5 }
@@ -23,9 +31,9 @@ const Home = () => {
 
     const observer2 = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
+        if (entry.isIntersecting && !hasAnimated2) {
           animateNumber2(0, 500, 1000); // Start number animation
-          setHasAnimated(true);
+          setHasAnimated2(true);
         }
       },
       { threshold: 0.5 }
@@ -47,7 +55,7 @@ const Home = () => {
         observer2.unobserve(cardRef2Current);
       }
     };
-  }, [hasAnimated]);
+  }, [hasAnimated1, hasAnimated2]);
 
   // Function to animate the number
   const animateNumber1 = (start, end, duration) => {
@@ -91,13 +99,17 @@ const Home = () => {
       </section>
       <section className="home-number-section">
         <div className="home-number-div">
-          <div ref={cardRef1}>
-            <p>Number of Projects</p>
-            <p>{number1}+</p>
+          <div className="in" ref={cardRef1}>
+            <div>
+              <h3>Number of Projects</h3>
+              <p>{number1}+</p>
+            </div>
           </div>
-          <div ref={cardRef2}>
-            <p>Total Clients</p>
-            <p>{number2}+</p>
+          <div className="in" ref={cardRef2}>
+            <div>
+              <h3>Total Clients</h3>
+              <p>{number2}+</p>
+            </div>
           </div>
         </div>
       </section>

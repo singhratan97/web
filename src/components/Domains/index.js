@@ -1,6 +1,13 @@
 import "./domains.scss";
+import { useEffect } from "react";
 
 const Domains = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling
+    });
+  }, []);
   return (
     <div className="domains">
       <h2 className="domains-header">Domains</h2>

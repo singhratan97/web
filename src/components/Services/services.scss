@@ -4,6 +4,9 @@
   margin-top: 50px;
   margin-bottom: 50px;
   font-family: inherit !important;
+  .ant-collapse-header-text {
+    font-weight: bolder;
+  }
 
   div.ant-collapse {
     font-family: inherit !important;
