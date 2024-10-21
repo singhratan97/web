@@ -6,7 +6,7 @@ const AddressDetails = () => {
       <h3>Address</h3>
       <p>No 13/8 Sakthi Nagar 4th street Choolaimedu Chennai - 600094</p>
       <h3>Email id</h3>
-      <p>xyz@gmail.com</p>
+      <p>widetranwt@gmail.com</p>
     </div>
   );
 };
