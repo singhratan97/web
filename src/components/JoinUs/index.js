@@ -67,7 +67,7 @@ const JoinUs = () => {
     }
 
     let finalData = {
-      to_name: "Raman Deep Kaur / Sukhdeep Singh",
+      to_name: "",
       ...formData,
     };
 
