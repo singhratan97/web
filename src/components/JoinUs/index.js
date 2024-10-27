@@ -2,7 +2,7 @@ import emailjs from "emailjs-com";
 import "./joinUs.scss";
 import { notification } from "antd";
 import { useState, useEffect } from "react";
-import { INDMobileRegex, emailRegex } from "../../utils/constants";
+import { /* INDMobileRegex,*/ emailRegex } from "../../utils/constants";
 
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -38,11 +38,24 @@ const JoinUs = () => {
     });
   };
 
-  const handleChangeMobile = (value) => {
-    console.log(value);
+  const handleChangeMobile = (value, countryDetails) => {
+    let countryDetailsFormatArray = countryDetails.format.split("");
+    let mobileNumber;
+
+    for (let i = 0; i < value.length; i++) {
+      for (let j = 0; j < countryDetailsFormatArray.length; j++) {
+        if (countryDetailsFormatArray[j] === ".") {
+          countryDetailsFormatArray[j] = value[i];
+          break;
+        }
+      }
+    }
+
+    mobileNumber = countryDetailsFormatArray.join("");
+
     setFormData({
       ...formData,
-      mobile: value,
+      mobile: mobileNumber,
     });
   };
 
@@ -62,7 +75,15 @@ const JoinUs = () => {
       return;
     }
 
-    if (!INDMobileRegex.test(formData.mobile)) {
+    // if (!INDMobileRegex.test(formData.mobile)) {
+    //   notification["info"]({
+    //     message: "Info",
+    //     description: "Please enter valid mobile number.",
+    //   });
+    //   return;
+    // }
+
+    if (formData.mobile.includes(".")) {
       notification["info"]({
         message: "Info",
         description: "Please enter valid mobile number.",
