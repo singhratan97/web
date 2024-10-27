@@ -3,6 +3,10 @@ import "./joinUs.scss";
 import { notification } from "antd";
 import { useState, useEffect } from "react";
 import { INDMobileRegex, emailRegex } from "../../utils/constants";
+
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+
 import Loader from "../../dependencies/Loader";
 
 const JoinUs = () => {
@@ -22,15 +26,23 @@ const JoinUs = () => {
   }, []);
 
   const handleChange = (e) => {
-    if (e.target.name === "mobile") {
-      if (e.target.value.length > 10) {
-        return;
-      }
-    }
+    // if (e.target.name === "mobile") {
+    //   if (e.target.value.length > 10) {
+    //     return;
+    //   }
+    // }
 
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleChangeMobile = (value) => {
+    console.log(value);
+    setFormData({
+      ...formData,
+      mobile: value,
     });
   };
 
@@ -130,13 +142,22 @@ const JoinUs = () => {
             onChange={handleChange}
           />
           <label htmlFor="number">Contact Number*</label>
-          <input
+          {/* <input
             id="number"
             type="number"
             name="mobile"
             value={formData.mobile}
             placeholder="Enter your Mobile Number"
             onChange={handleChange}
+          /> */}
+          <PhoneInput
+            id="number"
+            name="mobile"
+            country={"in"} // Set default country code (e.g., "us" for the USA)
+            value={formData.mobile}
+            placeholder="Enter your Mobile Number"
+            className="mobile"
+            onChange={handleChangeMobile}
           />
           <label htmlFor="email">Email Id*</label>
           <input
