@@ -5,3 +5,7 @@ body {
   font-style: normal;
   margin: 0;
 }
+
+.main-loader {
+  height: 100vh;
+}

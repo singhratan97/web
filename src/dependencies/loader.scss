@@ -10,5 +10,5 @@
   align-items: center;
   z-index: 1000; /* Ensure it's above other content */
   backdrop-filter: blur(5px); /* Blur the background */
-  pointer-events: none; /* Make the background unclickable */
+  pointer-events: all; /* Make the background unclickable */
 }

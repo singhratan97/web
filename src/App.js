@@ -20,7 +20,13 @@ function App() {
       <Router>
         <JoinHeader />
         <Header />
-        <Suspense fallback={<Loader />}>
+        <Suspense
+          fallback={
+            <div className="main-loader">
+              <Loader />
+            </div>
+          }
+        >
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<About />} />
